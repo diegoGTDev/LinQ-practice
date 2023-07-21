@@ -9,12 +9,17 @@ public class LinqQueries
         using (StreamReader reader = new StreamReader("books.json"))
         {
             string json = reader.ReadToEnd();
-            this.bookCollection = System.Text.Json.JsonSerializer.Deserialize<List<Book>>(json, new System.Text.Json.JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            this.bookCollection = System.Text.Json.JsonSerializer.Deserialize<List<Book>>(json, new System.Text.Json.JsonSerializerOptions() { PropertyNameCaseInsensitive = true })!;
         }
 
     }
     public IEnumerable<Book> GetBooks()
     {
         return this.bookCollection;
+    }
+
+    public IEnumerable<Book> GetBooksAfter2000()
+    {
+        return this.bookCollection.Where(b => b.PublishedDate.Year > 2000);
     }
 }
