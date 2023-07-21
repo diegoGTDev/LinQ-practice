@@ -20,6 +20,11 @@ public class LinqQueries
 
     public IEnumerable<Book> GetBooksAfter2000()
     {
-        return this.bookCollection.Where(b => b.PublishedDate.Year > 2000);
+        //Extension method
+        // return this.bookCollection.Where(b => b.PublishedDate.Year > 2000);
+        //Querie Expression method
+        return from l in this.bookCollection
+               where l.PublishedDate.Year > 2000
+               select l;
     }
 }
