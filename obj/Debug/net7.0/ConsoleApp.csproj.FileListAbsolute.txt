@@ -1,0 +1,15 @@
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\bin\Debug\net7.0\ConsoleApp.exe
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\bin\Debug\net7.0\ConsoleApp.deps.json
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\bin\Debug\net7.0\ConsoleApp.runtimeconfig.json
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\bin\Debug\net7.0\ConsoleApp.dll
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\bin\Debug\net7.0\ConsoleApp.pdb
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.AssemblyReference.cache
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfoInputs.cache
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.AssemblyInfo.cs
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.csproj.CoreCompileInputs.cache
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.dll
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\refint\ConsoleApp.dll
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.pdb
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ConsoleApp.genruntimeconfig.cache
+c:\Users\PC\Documents\Programacion\Platzi\LINQ\ConsoleApp\obj\Debug\net7.0\ref\ConsoleApp.dll
