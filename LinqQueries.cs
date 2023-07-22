@@ -27,4 +27,12 @@ public class LinqQueries
                where l.PublishedDate.Year > 2000
                select l;
     }
+
+    public bool allBooksHasStatus(){
+        return this.bookCollection.All(b => b.Status != null);
+    }
+
+    public bool anyBooksWasPublishedIn2005(){
+        return this.bookCollection.Any(b => b.PublishedDate.Year == 2005);
+    }
 }

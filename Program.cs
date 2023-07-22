@@ -2,7 +2,11 @@
 //All the books
 // printValues(queries.GetBooks());
 //Get books after 2000
-printValues(queries.GetBooksAfter2000());
+// printValues(queries.GetBooksAfter2000());
+//All books has status
+// Console.WriteLine(queries.allBooksHasStatus());
+//Any books was published in 2005
+Console.WriteLine(queries.anyBooksWasPublishedIn2005());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
