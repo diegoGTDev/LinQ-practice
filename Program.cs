@@ -12,10 +12,19 @@
 // printValues(queries.GetJavaBooksOrderedByName());
 // printValues(queries.GetBooksWithMoreThan250PagesOrdered());
 // printValues(queries.GetTheFirstThreeBooksJavaOrederedByDate());
-printValues(queries.ThirthAndFourthBookWithMoreThan400Pages());
+// printValues(queries.ThirthAndFourthBookWithMoreThan400Pages());
+//Select
+printItemValues(queries.TitleAndPageCountOfTheFirstThirthElements());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
         Console.WriteLine("{0,-60} {1,15} {2,15}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+    }
+}
+
+void printItemValues(IEnumerable<Item> data){
+    Console.WriteLine("{0, -60} {1,15}\n", "Title", "Pages");
+    foreach(var i in data){
+        Console.WriteLine("{0, -60} {1,15}", i.Title, i.Pages);
     }
 }

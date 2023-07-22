@@ -64,6 +64,10 @@ public class LinqQueries
         return this.bookCollection
         .TakeWhile(b => b.PageCount > 400);
     }
-
+    //Reto clase 16 Before class
+    public IEnumerable<Item> TitleAndPageCountOfTheFirstThirthElements(){
+        return this.bookCollection.Take(3)
+        .Select(p => new Item { Title = p.Title, Pages = p.PageCount });
+    }
 
 }
