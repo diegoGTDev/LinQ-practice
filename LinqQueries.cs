@@ -45,7 +45,7 @@ public class LinqQueries
     }
 
     public IEnumerable<Book> GetBooksWithMoreThan250PagesOrdered(){
-        return this.bookCollection.Where(b => b.PageCount > 450).OrderByDescending(p => p.PageCount);
+        return this.bookCollection.Where(b => b.PageCount > 250).OrderByDescending(p => p.PageCount);
     }
 
     public IEnumerable<Book> GetTheFirstThreeBooksJavaOrederedByDate(){
@@ -55,8 +55,15 @@ public class LinqQueries
     }
 
     public IEnumerable<Book> ThirthAndFourthBookWithMoreThan400Pages(){
-        return this.bookCollection.Where(p => p.PageCount > 400)
-        .Take(4)
-        .Skip(2);
+
+        // return this.bookCollection.Where(p => p.PageCount > 400)
+        // .Take(4)
+        // .Skip(2);
+        
+        //* Using TakeWhile
+        return this.bookCollection
+        .TakeWhile(b => b.PageCount > 400);
     }
+
+
 }
