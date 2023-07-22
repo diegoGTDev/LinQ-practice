@@ -10,7 +10,9 @@
 //Get Books with categorie python
 // printValues(queries.GetBooksPython());
 // printValues(queries.GetJavaBooksOrderedByName());
-printValues(queries.GetBooksWithMoreThan250PagesOrdered());
+// printValues(queries.GetBooksWithMoreThan250PagesOrdered());
+// printValues(queries.GetTheFirstThreeBooksJavaOrederedByDate());
+printValues(queries.ThirthAndFourthBookWithMoreThan400Pages());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
