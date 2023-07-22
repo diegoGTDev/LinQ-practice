@@ -37,6 +37,6 @@ public class LinqQueries
     }
 
     public IEnumerable<Book> GetBooksPython(){
-        return this.booksCollection.Where(b => b.Categories.Contains("Python"));
+        return this.bookCollection.Where(b => b.Categories.Contains("Python"));
     }
 }

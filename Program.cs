@@ -6,7 +6,9 @@
 //All books has status
 // Console.WriteLine(queries.allBooksHasStatus());
 //Any books was published in 2005
-Console.WriteLine(queries.anyBooksWasPublishedIn2005());
+// Console.WriteLine(queries.anyBooksWasPublishedIn2005());
+//Get Books with categorie python
+printValues(queries.GetBooksPython());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
