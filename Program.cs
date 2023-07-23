@@ -16,11 +16,11 @@
 // Console.Write(queries.getMinimalDate());
 // Console.WriteLine(queries.getMaxDate());
 // Console.WriteLine(queries.TheMinimalPageCountDiffToZero().Title);
-printItemValues(queries.TitleAndPageCountOfTheFirstThirthElements());
-// Suma
-Console.WriteLine($"La suma es de: {queries.SumAllThePagesOfBooksBetween200and500()}");
-Console.WriteLine(queries.TitlesAbove2015());
-// printGroup(queries.group());
+// printItemValues(queries.TitleAndPageCountOfTheFirstThirthElements());
+//Suma
+// Console.WriteLine($"La suma es de: {queries.SumAllThePagesOfBooksBetween200and500()}");
+// Console.WriteLine(queries.TitlesAbove2015());
+printGroup(queries.group());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
