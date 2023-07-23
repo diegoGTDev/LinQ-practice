@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
 public class LinqQueries
@@ -68,6 +69,42 @@ public class LinqQueries
     public IEnumerable<Item> TitleAndPageCountOfTheFirstThirthElements(){
         return this.bookCollection.Take(3)
         .Select(p => new Item { Title = p.Title, Pages = p.PageCount });
+    }
+
+    public DateTime getMinimalDate(){
+        return this.bookCollection.Min(p => p.PublishedDate);
+    }
+    public DateTime getMaxDate(){
+        return this.bookCollection.Max(p => p.PublishedDate);
+    }
+
+    public Book TheMinimalPageCountDiffToZero(){
+        return this.bookCollection.Where(book => book.PageCount > 0).MinBy(p=>p.PublishedDate)!;
+    }
+
+    public int SumAllThePagesOfBooksBetween200and500(){
+        return this.bookCollection.Where(predicate => predicate.PageCount >= 200 && predicate.PageCount <= 500 ).Sum(p => p.PageCount);
+    }
+
+    public string TitlesAbove2015(){
+        return this.bookCollection
+        .Where(p => p.PublishedDate.Year > 2015)
+        .Aggregate("" ,(TituloLibros, next) =>
+        {
+            if (TituloLibros != string.Empty){
+                TituloLibros += "-" + next.Title;
+            }
+            else{
+                TituloLibros += next.Title;
+            }
+            return TituloLibros;
+        }
+        );
+    }
+
+    public IEnumerable<IGrouping<int,Book>> group(){
+        return this.bookCollection.Where(p => p.PublishedDate.Year >= 2000)
+        .GroupBy(p => p.PublishedDate.Year);
     }
 
 }
