@@ -107,4 +107,8 @@ public class LinqQueries
         .GroupBy(p => p.PublishedDate.Year);
     }
 
+    public ILookup<char, Book> DictionaryBooksByLetter(){
+        return this.bookCollection.ToLookup(p => p.Title[0], p => p);
+    }
+
 }

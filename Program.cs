@@ -20,7 +20,9 @@
 //Suma
 // Console.WriteLine($"La suma es de: {queries.SumAllThePagesOfBooksBetween200and500()}");
 // Console.WriteLine(queries.TitlesAbove2015());
-printGroup(queries.group());
+// printGroup(queries.group());
+// LookUp
+printDictionary(queries.DictionaryBooksByLetter(), 'S');
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
     foreach(var item in data){
@@ -45,4 +47,11 @@ void printGroup(IEnumerable<IGrouping<int,Book>> data){
         }
     }
 
+}
+
+void printDictionary(ILookup<char, Book> dic, char letra){
+    Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
+    foreach(var item in dic[letra]){
+        Console.WriteLine("{0,-60} {1,15} {2,15}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
+    }
 }
