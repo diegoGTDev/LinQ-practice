@@ -107,4 +107,14 @@ public class LinqQueries
         .GroupBy(p => p.PublishedDate.Year);
     }
 
+    public ILookup<char, Book> DictionaryBooksByLetter(){
+        return this.bookCollection.ToLookup(p => p.Title[0], p => p);
+    }
+
+    public IEnumerable<Book> BooksAfter2005WithMoreThan500Pages(){
+        var libros500 = this.bookCollection.Where(p => p.PageCount>500);
+        var librosyear = this.bookCollection.Where(p=> p.PublishedDate.Year > 2005);
+
+        return librosyear.Join(libros500, p=>p.Title, x => x.Title, (p,x) => p);
+    }
 }
