@@ -13,13 +13,13 @@
 // printValues(queries.GetBooksWithMoreThan250PagesOrdered());
 // printValues(queries.GetTheFirstThreeBooksJavaOrederedByDate());
 // printValues(queries.ThirthAndFourthBookWithMoreThan400Pages());
-Console.Write(queries.getMinimalDate());
-Console.WriteLine(queries.getMaxDate());
-Console.WriteLine(queries.TheMinimalPageCountDiffToZero().Title);
-// printItemValues(queries.TitleAndPageCountOfTheFirstThirthElements());
+// Console.Write(queries.getMinimalDate());
+// Console.WriteLine(queries.getMaxDate());
+// Console.WriteLine(queries.TheMinimalPageCountDiffToZero().Title);
+printItemValues(queries.TitleAndPageCountOfTheFirstThirthElements());
 // Suma
-// Console.WriteLine($"La suma es de: {queries.SumAllThePagesOfBooksBetween200and500()}");
-// Console.WriteLine(queries.TitlesAbove2015());
+Console.WriteLine($"La suma es de: {queries.SumAllThePagesOfBooksBetween200and500()}");
+Console.WriteLine(queries.TitlesAbove2015());
 // printGroup(queries.group());
 void printValues(IEnumerable<Book> data){
     Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Title", "PageCount", "PublishedDate");
@@ -28,12 +28,12 @@ void printValues(IEnumerable<Book> data){
     }
 }
 
-// void printItemValues(IEnumerable<Item> data){
-//     Console.WriteLine("{0, -60} {1,15}\n", "Title", "Pages");
-//     foreach(var i in data){
-//         Console.WriteLine("{0, -60} {1,15}", i.Title, i.Pages);
-//     }
-// }
+void printItemValues(IEnumerable<Item> data){
+    Console.WriteLine("{0, -60} {1,15}\n", "Title", "Pages");
+    foreach(var i in data){
+        Console.WriteLine("{0, -60} {1,15}", i.Title, i.Pages);
+    }
+}
 
 void printGroup(IEnumerable<IGrouping<int,Book>> data){
     foreach(var grupo in data){
